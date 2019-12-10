@@ -70,6 +70,10 @@ const Hybridcloud=()=> {
   const toggleTab = () => {
     setNav(isOpen => !isOpen)
   }
+  const [isOpen, setNav] = useState(true)
+  const closeToggleTab = () => {
+    setNav(isOpen => !isOpen)
+  }
 
     return (
       <Layout>
@@ -155,7 +159,7 @@ const Hybridcloud=()=> {
                     <NavLink
                       id="bgL"
                      className={classnames({ active: activeTab === '1' })}
-            onClick={() => { toggle('1'); }}
+            onClick={() => { toggle('1');closeToggleTab() }}
                     >
                       UNDERSTANDING THE HYBRID CLOUD
                     </NavLink>
@@ -168,7 +172,7 @@ const Hybridcloud=()=> {
                     <NavLink
                       id="bgLL"
                      className={classnames({ active: activeTab === '2' })}
-            onClick={() => { toggle('2'); }}
+            onClick={() => { toggle('2'),closeToggleTab() }}
                     >
                       GETTING STARTED TO HYBRID CLOUD
                     </NavLink>
