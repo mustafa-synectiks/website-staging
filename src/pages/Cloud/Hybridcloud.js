@@ -143,7 +143,7 @@ const Hybridcloud=()=> {
           <div className="px-5 py-2 text-justify"></div>
           <div className="">
             <Row className="position-relative">
-              <div className="">
+              <div className="hybridFixed">
               <button onClick={toggleTab} className='logo-btn'>
               <FiAlignLeft/>
               </button>
@@ -997,6 +997,62 @@ var va = document.createElement('script'); va.type = 'text/javascript'; va.async
 export default Hybridcloud
 
 const HybridWrapper = styled.div`
+.hybridFixed{
+  position: fixed;
+  top:6rem;
+  background: white;
+  z-index: 99;
+}
+a#bgL,
+a#bgLL,
+a#bgLLL {
+  padding-top: 1rem !important;
+    background: white !important;
+    text-align: left;
+}
+a#bgL.active,
+a#bgLL.active,
+a#bgLLL.active  {
+    border-right: 5px solid #007cc2;
+    padding-top: 1rem !important;
+    background: white !important;
+    text-align: left;
+    color: #007cc2;
+    border-radius: 0px;
+}
+.one > span > img {
+	margin-right: -40px !important;
+  width: 55px !important;
+  z-index: 999;
+  position: relative;
+}
+.one {
+	z-index: 99999;
+	display: flex;
+	background: white;
+	box-shadow: 5px 5px 5px lightgray;
+  padding: 5px 2px 2px 20px;
+  border-bottom: 1px solid lightgrey;
+  width:100%;
+  /* background:rgba(0,0,0,0.5); */
+}
+ul.tabList.nav.flex-column {
+		position: relative;
+		z-index: 99999;
+		width: 100%;
+		left: 0rem;
+	}
+	ul.tabList.nav.flex-column > li > a {
+		width: 100%;
+		color: rgba(0, 0, 0, 0.8);
+		height: 10vh;
+		font-size: 12px;
+		cursor: pointer;
+		padding-left: 3.2rem;
+	}
+.hPtabs{
+  margin-top:2rem;
+}
 h1{
   font-size:1.4rem;
 }
@@ -1010,17 +1066,18 @@ h4{
   font-size:1.1rem;
 }
 .hybmt{
-  margin-top: 1.5rem;
+  margin-top: 2.5rem;
 }
 .nav-link.active{
   background: rgba(0,0,0,0);
 }
 .logo-btn {
-    font-size:2rem;
+    font-size:2.5rem;
     background: white;
     border: none;
     outline: none;
     width: 100vw;
+    padding: 0.6rem;
     text-align: left;
     box-shadow: 2px 1px 10px rgba(0,0,0,0.3);
 }
@@ -1035,10 +1092,21 @@ h4{
   overflow: hidden;
 } */
 @media (min-width: 576px){
-  /* .nav-links {
-    height: auto;
-    display: flex;
-  } */
+a#bgL.active {
+	border-right: 5px solid #007cc2;
+	padding-left: 3rem !important;
+	background: white !important;
+}
+a#bgLL.active {
+	border-right: 5px solid #007cc2;
+	padding-left: 3rem !important;
+	background: white !important;
+}
+a#bgLLL.active {
+	border-right: 5px solid #007cc2;
+	padding-left: 3rem !important;
+	background: white !important;
+}
    .logo-btn {
     display: none;
   }
